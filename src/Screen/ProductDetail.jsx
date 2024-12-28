@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import baseURL from '../assets/baseURL';
+import "../../src/style.css"
 
 const ProductDetail = () => {
   const { id } = useParams(); // Extract product ID from the URL
@@ -42,7 +43,11 @@ const ProductDetail = () => {
   }, [location]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="spinner border-t-4 border-blue-700">bestinn</div>
+      </div>
+    );
   }
 
   if (error) {

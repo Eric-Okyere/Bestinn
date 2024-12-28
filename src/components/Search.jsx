@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import baseURL from '../assets/baseURL'; // Assuming baseURL points to the API endpoint
+import baseURL from '../assets/baseURL'; 
+import "../../src/style.css"
 
 const Search = () => {
   const location = useLocation();
@@ -40,7 +41,11 @@ const Search = () => {
   }, [query, products]); // Re-run the filter if the query or products change
 
   if (loading) {
-    return <div className="text-center">Loading...</div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="spinner border-t-4 border-blue-700">bestinn</div>
+      </div>
+    );
   }
 
   if (error) {
