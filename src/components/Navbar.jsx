@@ -76,13 +76,7 @@ const NavbarCompo = () => {
             isOpen ? "block" : "hidden"
           } absolute top-16 left-0 w-full bg-gray-100 shadow-md md:static md:flex md:space-x-6 md:items-center md:shadow-none`}
         >
-          <Link
-            to="/post"
-            className="block px-4 py-2 text-black hover:text-blue-500 text-lg md:inline-block md:ml-auto"
-            onClick={() => setIsOpen(false)}
-          >
-            Post
-          </Link>
+         
           <Link
             to="/dash"
             className="block px-4 py-2 text-black hover:text-blue-500 text-lg md:inline-block md:ml-auto"
