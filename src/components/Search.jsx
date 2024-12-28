@@ -13,7 +13,7 @@ const Search = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`${baseURL}send`); // Fetch all products
+        const response = await fetch(`${baseURL}mainpost`); // Fetch all products
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
@@ -69,7 +69,7 @@ const Search = () => {
                 <div className="p-5">
                   <h5 className="mb-2 text-xl font-bold text-gray-900">{product.name}</h5>
                   <p className="text-lg text-blue-700">Gh¢{product.price || 'N/A'}</p>
-                  <Link  to={`/product/${product.id}`}
+                  <Link  to={`/product/${product._id}`}
                     className="mt-3 inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700"
                   >
                     View Details
