@@ -78,11 +78,11 @@ const NavbarCompo = () => {
         >
          
           <Link
-            to="/dash"
+            to="/post"
             className="block px-4 py-2 text-black hover:text-blue-500 text-lg md:inline-block md:ml-auto"
             onClick={() => setIsOpen(false)}
           >
-            About
+            Post
           </Link>
         </div>
       </nav>
